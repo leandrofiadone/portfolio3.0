@@ -9,7 +9,7 @@ const query = groq` *[_type == "projectsExperience"]{
 } `;
 
 type Data = {
-	projects: Project;
+	projects: Project[];
 };
 
 export default async function handler(
