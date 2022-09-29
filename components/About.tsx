@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
 
-type Props = {};
+type Props = {
+	pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -20,7 +24,7 @@ function About({}: Props) {
 					opacity: 0,
 				}}
 				whileInView={{ opacity: 1, x: 0 }}
-				src="/fotoabout.jpg"
+				src={urlFor(pageInfo?.aboutMePic).url()}
 				alt="fotoabout"
 				width="500px"
 				height="500px"
@@ -39,19 +43,7 @@ function About({}: Props) {
 					background
 				</h4>
 				<p className="md:text-base text-xs ">
-					👋 Hi, I am Leandro! 📑 In 2021 I turned my professional career as an
-					audiovisual producer 🎥 and I started my studies at the Henry academy
-					to train as a Full-Stack Programmer with a Front-End orientation!
-					There i got more than +800 hours of pure practice with coding 💥 In
-					this way, gain experience working with Javascript, Html, Css, React
-					⚛️, Redux among other technologies. I have extensive knowledge in the
-					world of design and visual and sound aesthetics. I manage myself
-					perfectly with English. Currently I continue to reinforce my knowledge
-					with React JS, React Native, TypeScript and I am gradually delving
-					into the BlockChain code. ⚡️ I am a very patient, flexible and
-					sociable person. I know how to work very well in a team and I love to
-					always be behind the latest trends and cutting-edge technology! 💻📚 I
-					am currently looking for my first job in the IT world! 🌍
+					{pageInfo?.backgroundInformation}
 				</p>
 			</div>
 		</motion.div>

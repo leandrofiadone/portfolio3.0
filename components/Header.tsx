@@ -9,18 +9,19 @@ type Props = {
 };
 
 export default function Header({ socials }: Props) {
-	const [isHover, setIsHover] = useState(false);
+	// const [isHover, setIsHover] = useState(false);
 
-	const handleMouseEnter = () => {
-		setIsHover(true);
-	};
-	const handleMouseLeave = () => {
-		setIsHover(false);
-	};
-	const boxStyle = {
-		//...
-		fgColor: isHover ? "gray" : "null",
-	};
+	// const handleMouseEnter = () => {
+	// 	setIsHover(true);
+	// };
+	// const handleMouseLeave = () => {
+	// 	setIsHover(false);
+	// };
+	// const boxStyle = {
+	// 	//...
+	// 	fgColor: isHover ? "gray" : "null",
+	// };
+
 	return (
 		<header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
 			<motion.div
@@ -38,15 +39,26 @@ export default function Header({ socials }: Props) {
 					duration: 1.2,
 				}}
 				className="flex flex-row items-center">
-				{/* {socials.map((social) => (
+				{socials.map((social) => (
 					<SocialIcon
 						key={social._id}
 						url={social.url}
 						fgColor="gray"
 						bgColor="transparent"
+						// network={social.title}
 					/>
-				))} */}
+				))}
 
+				{/* NO LOGRE CONECTAR WHATSAPP A SU NETWORK POR LA API DE SANITY */}
+
+				<SocialIcon
+					url="https://wa.me/+5491151275282"
+					network="whatsapp"
+					fgColor="gray"
+					bgColor="transparent"
+				/>
+
+				{/* 
 				<SocialIcon
 					url="https://twitter.com/tokentango"
 					fgColor="gray"
@@ -72,8 +84,9 @@ export default function Header({ socials }: Props) {
 					url="https://github.com/leandrofiadone"
 					fgColor="gray"
 					bgColor="transparent"
-				/>
+				/> */}
 			</motion.div>
+
 			<Link href="#contact">
 				<motion.div
 					initial={{

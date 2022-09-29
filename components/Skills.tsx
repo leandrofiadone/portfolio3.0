@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
+import { Skill as SkillType } from "../typings";
 
-type Props = {};
+type Props = {
+	skills: SkillType[];
+};
 
-const Skills = (props: Props) => {
+const Skills = ({ skills }: Props) => {
 	return (
 		<motion.div className="h-screen flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl-space-y-0 mx-auto items-center">
 			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 md:text-2xl">
@@ -15,20 +18,9 @@ const Skills = (props: Props) => {
 			</h3>
 
 			<div className="grid grid-cols-4 gap-5">
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
-				<Skill />
+				{skills?.map((skill) => (
+					<Skill key={skill._id} skill={skill} />
+				))}
 			</div>
 		</motion.div>
 	);

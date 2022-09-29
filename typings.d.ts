@@ -5,6 +5,12 @@ interface SanityBody {
 	_updatedAt: string;
 }
 
+export interface Social extends SanityBody {
+	_type: "social";
+	title: string;
+	url: string;
+}
+
 export interface Image {
 	_type: "image";
 	asset: {
@@ -46,12 +52,7 @@ export interface Project extends SanityBody {
 	dateTime: string;
 	summary: string;
 	title: string;
+	nameLink: string;
 	techUsed: Technology[];
 	gitHubUrl: string;
-}
-
-export interface Social extends SanityBody {
-	_type: "social";
-	title: string;
-	url: string;
 }
