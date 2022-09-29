@@ -3,7 +3,7 @@ import { Project } from "../typings";
 import ProjectExperienceCard from "./ProjectExperienceCard";
 
 type Props = {
-	projects: Project;
+	projects: Project[];
 };
 
 const ProjectExperience = ({ projects }: Props) => {
