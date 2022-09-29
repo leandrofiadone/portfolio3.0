@@ -17,7 +17,7 @@ const ProjectExperience = ({ projects }: Props) => {
 			scroll-smooth hover:scroll-auto p-10 snap-x snap-mandatory
 			scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
 				{projects?.map((project) => (
-					<ProjectExperienceCard key={project.id} project={project} />
+					<ProjectExperienceCard key={project._id} project={project} />
 				))}
 
 				{/* <ProjectExperienceCard />
