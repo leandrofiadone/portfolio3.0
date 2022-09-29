@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Social } from "../typings";
 
-type Props = {};
+type Props = {
+	socials: Social[];
+};
 
-export default function Header({}: Props) {
+export default function Header({ socials }: Props) {
 	const [isHover, setIsHover] = useState(false);
 
 	const handleMouseEnter = () => {
@@ -35,6 +38,15 @@ export default function Header({}: Props) {
 					duration: 1.2,
 				}}
 				className="flex flex-row items-center">
+				{/* {socials.map((social) => (
+					<SocialIcon
+						key={social._id}
+						url={social.url}
+						fgColor="gray"
+						bgColor="transparent"
+					/>
+				))} */}
+
 				<SocialIcon
 					url="https://twitter.com/tokentango"
 					fgColor="gray"

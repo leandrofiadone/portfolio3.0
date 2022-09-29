@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,8 +8,20 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ProjectExperience from "../components/ProjectExperience";
 import Skills from "../components/Skills";
+import { PageInfo, Project, Skill, Social } from "../typings";
+import { fetchGetProjects } from "../utils/fetchGetProjects";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchSkills } from "../utils/fetchSkills";
+import { fetchSocials } from "../utils/fetchSocials";
 
-const Home: NextPage = () => {
+type Props = {
+	// pageInfo: PageInfo;
+	skills: Skill[];
+	projects: Project[];
+	socials: Social[];
+};
+
+const Home = ({ skills, projects, socials }: Props) => {
 	return (
 		<div
 			className="bg-[rgb(36,36,36)] text-white h-screen 
@@ -19,7 +31,7 @@ const Home: NextPage = () => {
 				<title> Leandro Fiadone Portfolio </title>
 			</Head>
 
-			<Header />
+			<Header socials={socials} />
 
 			<section id="hero" className="snap-start">
 				<Hero />
@@ -55,3 +67,21 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+// 	// const pageInfo: PageInfo = await fetchPageInfo();
+// 	const skills: Skill[] = await fetchSkills();
+// 	const projects: Project[] = await fetchGetProjects();
+// 	const socials: Social[] = await fetchSocials();
+
+// 	return {
+// 		props: {
+// 			// pageInfo,
+// 			// skills,
+// 			// projects,
+// 			// socials,
+// 		},
+
+// 		revalidate: 10,
+// 	};
+// };
