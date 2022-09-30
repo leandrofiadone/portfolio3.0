@@ -70,7 +70,7 @@ export default Home;
 
 // export const getStaticProps: GetStaticProps<Props> = async () => {
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps: GetStaticProps<Props> = async () => {
 	const pageInfo: PageInfo = await fetchPageInfo();
 	const skills: Skill[] = await fetchSkills();
 	const projects: Project[] = await fetchGetProjects();
