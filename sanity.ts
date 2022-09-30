@@ -14,7 +14,7 @@ export const urlFor = (source: any) =>
 	createImageUrlBuilder(config).image(source);
 
 // const client = createClient({
-// 	projectId: "rjtgc0ww",
+// 	projectId: "rjtgc0ww",por e
 // 	dataset: "production",
 // 	apiVersion: "2022-09-30",
 // 	useCdn: false,
