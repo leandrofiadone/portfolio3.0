@@ -12,3 +12,10 @@ export const sanityClient = createClient(config);
 
 export const urlFor = (source: any) =>
 	createImageUrlBuilder(config).image(source);
+
+// const client = createClient({
+// 	projectId: "rjtgc0ww",
+// 	dataset: "production",
+// 	apiVersion: "2022-09-30",
+// 	useCdn: false,
+// });
