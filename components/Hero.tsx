@@ -16,7 +16,7 @@ function Hero({ pageInfo }: Props) {
 			`I´m <${pageInfo?.name}/> 💻`,
 			"A Greek name ...✍️",
 			"Originally ... <Λέανδρος/>",
-			"Means Lion-Man 🦁🦁",
+			"Means Lion-Man 🦁",
 		],
 		loop: true,
 		delaySpeed: 1000,
