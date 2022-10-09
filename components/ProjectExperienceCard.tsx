@@ -11,8 +11,9 @@ type Props = {
 const ProjectExperienceCard = ({ project }: Props) => {
 	return (
 		<article
-			className="flex flex-col rounded-lg  items-center space-y-7 flex-shrink-0
-        w-[240px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40  transition-opacity duration-200">
+			className="flex flex-col rounded-lg mt-20 items-center space-y-4 flex-shrink-0
+        w-[240px] md:w-[600px] xl:w-[750px] xl:h-[750px] snap-center bg-[#292929] 
+		p-10 hover:opacity-100 opacity-40  transition-opacity duration-200">
 			<motion.img
 				initial={{
 					y: -100,
@@ -47,7 +48,7 @@ const ProjectExperienceCard = ({ project }: Props) => {
 						/>
 					))}
 				</div>
-				<p className="uppercase py-5 text-gray-300">{project?.dateTime}</p>
+				<p className="uppercase py-3 text-gray-300">{project?.dateTime}</p>
 				<div className="list-disc space-y-4 ml-5 text-lg">
 					<p>{project?.summary}</p>
 				</div>

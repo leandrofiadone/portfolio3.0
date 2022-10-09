@@ -44,6 +44,7 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 			<section id="projectexperience" className="snap-center">
 				<ProjectExperience projects={projects} />
 			</section>
+
 			<section id="skills" className="snap-start">
 				<Skills skills={skills} />
 			</section>
@@ -56,7 +57,7 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 					<div className="flex items-center justify-center">
 						<img
 							className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0"
-							src="https://i.imgur.com/e2yvD6A.png"
+							src="/arrow.png"
 							alt="up"
 						/>
 					</div>
