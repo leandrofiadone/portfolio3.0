@@ -13,11 +13,11 @@ const Skills = ({ skills }: Props) => {
 			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 md:text-2xl">
 				Skills
 			</h3>
-			<h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
+			<h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm  ">
 				Hover over a skill for currency proficiency
 			</h3>
 
-			<div className="grid grid-cols-4 gap-5">
+			<div className="grid sm:grid-cols-5 grid-cols-4 gap-5 p-14">
 				{skills?.map((skill) => (
 					<Skill key={skill._id} skill={skill} />
 				))}
