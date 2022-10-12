@@ -45,6 +45,11 @@ function About({ pageInfo }: Props) {
 				<p className="md:text-base text-xs ">
 					{pageInfo?.backgroundInformation}
 				</p>
+				{/* <div className="frame">
+						<button className="custom-btn btn-5">
+							<span>Read More</span>
+						</button>
+				</div> */}
 			</div>
 		</motion.div>
 	);

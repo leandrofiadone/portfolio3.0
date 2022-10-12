@@ -59,6 +59,13 @@ function Hero({ pageInfo }: Props) {
 						<button className="heroButton">skills</button>
 					</Link>
 				</div>
+				<div className="frame">
+					<a href="/public/LeandroCvEnglish.pdf" download>
+						<button className="custom-btn btn-5">
+							<span>CV RESUME 📥</span>
+						</button>
+					</a>
+				</div>
 			</div>
 		</div>
 	);
