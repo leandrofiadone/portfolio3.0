@@ -19,29 +19,29 @@ const Contact = (props: Props) => {
 
 	return (
 		<div className="h-screen flex relative flex-column text-center md:text-left md-flex:row max-w-7xl px-10 justify-evenly mx-auto items-center">
-			<h3 className="absolute sm:top-20 top-16 uppercase tracking-[20px] text-gray-500 md:text-2xl sm:text-lg text-sm">
+			<h3 className="absolute sm:top-20 top-16 uppercase tracking-[20px] text-gray-500 xl:text-2xl sm:text-lg text-sm">
 				Contact
 			</h3>
-			<div className="flex flex-col md:space-y-10 sm:space-y-8 space-y-5">
-				<h4 className="md:text-4xl sm:text-xl text-lg font-semibold text-center">
+			<div className="flex flex-col md:space-y-6  space-y-5">
+				<h4 className="xl:text-4xl  sm:text-lg text-base font-semibold text-center">
 					I have just what you need.{" "}
 					<span className="decoration-[#F7AB0A]/50 underline">Lets talk.</span>
 				</h4>
 				<div className="flex items-center space-x-5 justify-center">
 					<PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-					<p className="md:text-2xl sm:text-xl text-base">+5491151275282</p>
+					<p className="xl:text-2xl  sm:text-lg text-base">+5491151275282</p>
 				</div>
 
 				<div className="flex items-center space-x-5 justify-center">
 					<EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-					<p className="md:text-2xl sm:text-xl text-base">
+					<p className="xl:text-2xl  sm:text-lg text-base">
 						leanfiadone@gmail.com
 					</p>
 				</div>
 
 				<div className="flex items-center space-x-5 justify-center">
 					<MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-					<p className="md:text-2xl sm:text-xl text-base">
+					<p className="xl:text-2xl  sm:text-lg text-base">
 						Buenos Aires, Argentina
 					</p>
 				</div>
@@ -78,7 +78,7 @@ const Contact = (props: Props) => {
 					/>
 					<button
 						type="submit"
-						className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold">
+						className="bg-[#F7AB0A] xl:py-4 md:py-3 py-2 px-10 rounded-md text-black font-bold">
 						Submit
 					</button>
 				</form>
