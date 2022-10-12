@@ -60,9 +60,7 @@ function Hero({ pageInfo }: Props) {
 					</Link>
 				</div>
 				<div className="frame">
-					<a
-						href="/public/LeandroCvEnglish.pdf"
-						download="LeandroCvEnglish.pdf">
+					<a href="/LeandroCvEnglish.pdf" download="LeandroCvEnglish.pdf">
 						<button className="custom-btn btn-5">
 							<span>CV RESUME 📥</span>
 						</button>
