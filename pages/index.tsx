@@ -28,13 +28,44 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
     snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0
     scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
 			<Head>
-				<title> Leandro Fiadone Portfolio </title>
-				<meta property="og:image" content={"../public/react.png"} />
-				<meta property="og:url" content="your url" />
+				<title>Leandro Fiadone - FullStack Developer</title>
+				<meta
+					name="description"
+					content="More than +1500 hours of experience with coding 💥"
+				/>
+
+				<meta property="og:url" content="https://leanfiadone.vercel.app/" />
 				<meta property="og:type" content="website" />
 				<meta
 					property="og:title"
 					content="Leandro Fiadone - FullStack Developer"
+				/>
+				<meta
+					property="og:description"
+					content="More than +1500 hours of experience with coding 💥"
+				/>
+				<meta
+					property="og:image"
+					content="https://img.icons8.com/clouds/500/000000/programming-flag.png"
+				/>
+
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content="leanfiadone.vercel.app" />
+				<meta
+					property="twitter:url"
+					content="https://leanfiadone.vercel.app/"
+				/>
+				<meta
+					name="twitter:title"
+					content="Leandro Fiadone - FullStack Developer"
+				/>
+				<meta
+					name="twitter:description"
+					content="More than +1500 hours of experience with coding 💥"
+				/>
+				<meta
+					name="twitter:image"
+					content="https://img.icons8.com/clouds/500/000000/programming-flag.png"
 				/>
 			</Head>
 
