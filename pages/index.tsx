@@ -29,7 +29,7 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
     scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
 			<Head>
 				<title> Leandro Fiadone Portfolio </title>
-				<meta property="og:image" content={"/react.png"} />
+				<meta property="og:image" content={"../public/react.png"} />
 				<meta property="og:url" content="your url" />
 				<meta property="og:type" content="website" />
 				<meta
