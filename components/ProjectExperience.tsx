@@ -14,7 +14,7 @@ const ProjectExperience = ({ projects }: Props) => {
 		justify-evenly mx-auto items-center">
 			<h3
 				className="absolute sm:top-20 top-14 uppercase 
-			sm:tracking-[20px] tracking-[10px] text-gray-500 xl:text-2xl md:text-lg  text-sm">
+			sm:tracking-[20px] tracking-[10px] text-gray-500 xl:text-2xl md:text-lg  text-sm font-['Electrolize']">
 				projects
 			</h3>
 

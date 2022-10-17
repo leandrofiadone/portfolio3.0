@@ -14,8 +14,8 @@ function About({ pageInfo }: Props) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl md:px-10 px-2 justify-evenly mx-auto items-center">
-			<h3 className="absolute top-14 md:top-20 uppercase tracking-[20px] text-gray-500 md:text-xl text-base">
+			className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl xl:px-10 lg:px-5 md:px-8 px-2 justify-evenly mx-auto items-center">
+			<h3 className="absolute top-14 md:top-20 uppercase tracking-[20px] text-gray-500 md:text-xl text-base font-['Electrolize']">
 				About
 			</h3>
 			<motion.img
@@ -37,12 +37,12 @@ function About({ pageInfo }: Props) {
 			/>
 
 			<div className="md:space-y-5 pt-10 space-y-4 px-0 md:px-10 font-['Electrolize']">
-				<h4 className="md:text-2xl lg:text-4xl text-lg font-semibold">
+				<h4 className="text-sm md:text-2xl xl:text-4xl text-lg font-semibold">
 					Here is a{" "}
 					<span className="underline decoration-[#F7AB0A] ">little</span>{" "}
 					background
 				</h4>
-				<p className="md:text-sm text-xs lg:text-lg ">
+				<p className="md:text-sm text-xs lg:text-base xl:text-lg ">
 					{pageInfo?.backgroundInformation}
 				</p>
 			</div>
