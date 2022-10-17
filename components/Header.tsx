@@ -111,7 +111,7 @@ export default function Header({ socials }: Props) {
 						fgColor="gray"
 						bgColor="transparent"
 					/>
-					<p className="uppercase hidden md:inline-flex text-sm text-gray">
+					<p className="uppercase hidden md:inline-flex text-sm text-gray font-['Electrolize']">
 						Get in touch
 					</p>
 				</motion.div>
