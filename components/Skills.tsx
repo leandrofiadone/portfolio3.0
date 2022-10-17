@@ -17,7 +17,7 @@ const Skills = ({ skills }: Props) => {
 				Hover over a skill for currency proficiency
 			</h3>
 
-			<div className="grid sm:grid-cols-5 grid-cols-4 gap-5 p-14">
+			<div className="grid sm:grid-cols-5 grid-cols-4 gap-5 xl:pt-20 lg:pt-32 p-14">
 				{skills?.map((skill) => (
 					<Skill key={skill._id} skill={skill} />
 				))}

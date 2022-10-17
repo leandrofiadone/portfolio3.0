@@ -12,8 +12,8 @@ const ProjectExperienceCard = ({ project }: Props) => {
 	return (
 		<article
 			className="flex flex-col rounded-lg mt-20 items-center sm:space-y-4 space-y-1 flex-shrink-0
-        w-[240px] md:w-[400px] lg:w-[550px] xl:w-[600px] snap-center bg-[#292929] 
-		sm:p-6 p-3 hover:opacity-100 opacity-40  transition-opacity duration-200">
+        w-[240px] md:w-[400px] lg:w-[300px]  xl:w-[600px] snap-center bg-[#292929] 
+		p-1 hover:opacity-100 opacity-40  transition-opacity duration-200">
 			<motion.img
 				initial={{
 					y: -100,
@@ -32,16 +32,13 @@ const ProjectExperienceCard = ({ project }: Props) => {
 				alt="BarberApp"
 			/>
 
-			<div className="px-0 md:px-10">
+			<div className="px-0 xl:px-10 ">
 				<a href={project?.nameLink}>
-					<h4 className="xl:text-2xl lg:text-xl md:text-lg  font-light cursor-pointer">
+					<h4 className="xl:text-2xl lg:text-xl md:text-lg  font-light cursor-pointer font-['Electrolize']">
 						{project?.projectTitle}🔗
 					</h4>
 				</a>
-				<p className="font-bold xl:text-lg md:text-base  text-sm mt-1">
-					Front-End Design
-				</p>
-				<div className="flex space-x2 my-2">
+				<div className="flex space-x2 my-1">
 					{project.techUsed.map((tech) => (
 						<img
 							key={tech._id}
@@ -50,10 +47,10 @@ const ProjectExperienceCard = ({ project }: Props) => {
 						/>
 					))}
 				</div>
-				<p className="uppercase py-3 xl:text-base text-xs text-gray-300">
+				<p className="uppercase py-1 xl:text-base text-xs text-gray-300 font-['Electrolize']">
 					{project?.dateTime}
 				</p>
-				<div className="list-disc space-y-4 sm:ml-3 sm:text-sm text-xs">
+				<div className="list-disc space-y-4 sm:ml-3 xl:text-sm text-xs">
 					<p>{project?.summary}</p>
 				</div>
 				<SocialIcon
