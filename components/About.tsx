@@ -33,7 +33,7 @@ function About({ pageInfo }: Props) {
 				}}
 				viewport={{ once: true }}
 				className="-mb-20 md:mb-0 flex-shrink-0 w-40 h-40  mt-10 rounded-full object-cover
-        md:rounded-lg md:w-64 sm:h-80 xl:w-[500px] xl:h-[600px]"
+        md:rounded-[32px] md:w-64 sm:h-80 xl:w-[500px] xl:h-[600px] "
 			/>
 
 			<div className="md:space-y-5 pt-10 space-y-4 px-0 md:px-10 font-['Electrolize']">
