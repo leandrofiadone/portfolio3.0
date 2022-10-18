@@ -22,6 +22,8 @@
     "react-indiana-drag-scroll": "^3.0.0-alpha",
     "react-simple-typewriter": "^4.0.2",
     "react-social-icons": "^5.14.0",
+    "react-spring": "^9.5.5",
+    "react-spring-carousel": "^2.0.19",
     "react-use-draggable-scroll": "^0.4.7",
     "sanity": "^2.33.2",
     "vercel": "^28.4.5"
