@@ -30,19 +30,19 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 	bg-gradient-to-b from-gray-900 via-cyan-900 to-sky-900
 	">
 			<Head>
-				<title>Leandro Fiadone - FullStack Developer</title>
-				<meta
-					name="description"
-					content="More than +1500 hours of experience with coding 💥"
-				/>
+				<title>👨‍💻 Leandro Fiadone 🇦🇷 FullStack Developer</title>
+				<meta name="description" content="🔹 Front-End Oriented💻⌨🖥🖱🔋🇦🇷 🔸" />
 
 				<meta property="og:url" content="https://leanfiadone.vercel.app/" />
 				<meta property="og:type" content="website" />
 				<meta
 					property="og:title"
-					content="🔹 Leandro Fiadone 👨‍💻- FullStack Developer 🔸"
+					content="🔹 Leandro Fiadone 👨‍💻 FullStack Developer 🔸"
 				/>
-				<meta property="og:description" content="Front-End Oriented💻⌨🖥🖱🔋🇦🇷" />
+				<meta
+					property="og:description"
+					content="🔹 Front-End Oriented💻⌨🖥🖱🔋🇦🇷 🔸"
+				/>
 				<meta
 					property="og:image"
 					content="https://c4.wallpaperflare.com/wallpaper/176/195/659/javascript-node-js-abstract-logo-wallpaper-preview.jpg"
@@ -56,11 +56,11 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 				/>
 				<meta
 					name="twitter:title"
-					content="🔹 Leandro Fiadone - FullStack Developer 🔸"
+					content="🔹 Leandro Fiadone 👨‍💻 FullStack Developer 🔸"
 				/>
 				<meta
 					name="twitter:description"
-					content="Front-End Oriented💻⌨🖥🖱🔋🇦🇷"
+					content="🔹 Front-End Oriented💻⌨🖥🖱🔋🇦🇷 🔸"
 				/>
 				<meta
 					name="twitter:image"
