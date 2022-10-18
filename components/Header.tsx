@@ -23,7 +23,7 @@ export default function Header({ socials }: Props) {
 	// };
 
 	return (
-		<header className="sticky top-0 sm:p-5 pt-0 px-3 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+		<header className="sticky top-0 sm:p-5 pt-0 px-3 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
 			<motion.div
 				initial={{
 					x: -500,
@@ -39,7 +39,7 @@ export default function Header({ socials }: Props) {
 				transition={{
 					duration: 1.2,
 				}}
-				className="flex flex-row items-center">
+				className="flex flex-row items-center ">
 				{socials.map((social) => (
 					<SocialIcon
 						key={social._id}

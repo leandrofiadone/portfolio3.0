@@ -11,9 +11,9 @@ type Props = {
 const ProjectExperienceCard = ({ project }: Props) => {
 	return (
 		<article
-			className="flex flex-col rounded-lg mt-20 items-center sm:space-y-4 space-y-1 flex-shrink-0
-        w-[240px] md:w-[400px] lg:w-[300px]  xl:w-[600px] snap-center bg-[#292929] 
-		p-1 hover:opacity-100 opacity-40  transition-opacity duration-200">
+			className="flex flex-col rounded-lg xl:mt-0 md:mt-10 mt-8 items-center sm:space-y-4 space-y-1 flex-shrink-0
+        w-[240px] md:w-[400px] lg:w-[300px]  xl:w-[520px] snap-center bg-[#292929] 
+		p-1 hover:opacity-100 opacity-40  transition-opacity duration-200 shadow-lg shadow-cyan-500/50">
 			<motion.img
 				initial={{
 					y: -100,

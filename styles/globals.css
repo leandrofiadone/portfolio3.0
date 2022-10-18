@@ -37,17 +37,17 @@
 		box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
 			7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 		outline: none;
-		font-size: 12px;
+		font-size: 16px;
 	}
 
 	/* 5 */
 	.btn-5 {
 		width: 150px;
-		height: 25px;
-		line-height: 25px;
+		height: 27px;
+		line-height: 10px;
 		padding: 0;
 		border: none;
-		border-radius: 112px;
+		border-radius: 150px;
 		background: #d19108;
 	}
 	.btn-5:hover {
@@ -64,8 +64,8 @@
 		height: 1px;
 		width: 0;
 		background: #f7ac0a8c;
-		box-shadow: -1px -1px 10px 0px #f7ab0a, 7px 7px 20px 0px #0003,
-			4px 4px 5px 0px #0002;
+		box-shadow: -1px -1px 10px 0px #f7ab0a;
+
 		transition: 400ms ease all;
 	}
 	.btn-5:after {

@@ -26,7 +26,9 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 		<div
 			className="bg-[rgb(36,36,36)] text-white h-screen 
     snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0
-    scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+    scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 
+	bg-gradient-to-b from-gray-900 via-cyan-900 to-sky-900
+	">
 			<Head>
 				<title>Leandro Fiadone - FullStack Developer</title>
 				<meta
@@ -38,15 +40,12 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 				<meta property="og:type" content="website" />
 				<meta
 					property="og:title"
-					content="Leandro Fiadone - FullStack Developer"
+					content="🔹 Leandro Fiadone 👨‍💻- FullStack Developer 🔸"
 				/>
-				<meta
-					property="og:description"
-					content="More than +1500 hours of experience with coding 💥"
-				/>
+				<meta property="og:description" content="Front-End Oriented💻⌨🖥🖱🔋🇦🇷" />
 				<meta
 					property="og:image"
-					content="https://img.icons8.com/clouds/500/000000/programming-flag.png"
+					content="https://c4.wallpaperflare.com/wallpaper/176/195/659/javascript-node-js-abstract-logo-wallpaper-preview.jpg"
 				/>
 
 				<meta name="twitter:card" content="summary_large_image" />
@@ -57,21 +56,21 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 				/>
 				<meta
 					name="twitter:title"
-					content="Leandro Fiadone - FullStack Developer"
+					content="🔹 Leandro Fiadone - FullStack Developer 🔸"
 				/>
 				<meta
 					name="twitter:description"
-					content="More than +1500 hours of experience with coding 💥"
+					content="Front-End Oriented💻⌨🖥🖱🔋🇦🇷"
 				/>
 				<meta
 					name="twitter:image"
-					content="https://img.icons8.com/clouds/500/000000/programming-flag.png"
+					content="https://c4.wallpaperflare.com/wallpaper/176/195/659/javascript-node-js-abstract-logo-wallpaper-preview.jpg"
 				/>
 			</Head>
 
 			<Header socials={socials} />
 
-			<section id="hero" className="snap-start">
+			<section id="hero" className="snap-start ">
 				<Hero pageInfo={pageInfo} />
 			</section>
 

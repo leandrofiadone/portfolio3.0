@@ -15,7 +15,7 @@ function About({ pageInfo }: Props) {
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
 			className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl xl:px-10 lg:px-5 md:px-8 px-2 justify-evenly mx-auto items-center">
-			<h3 className="absolute top-14 md:top-20 uppercase tracking-[20px] text-gray-500 md:text-xl text-base font-['Electrolize']">
+			<h3 className="absolute top-14 md:top-20 uppercase tracking-[20px] text-[#F7AB0A]  md:text-xl text-base font-['Electrolize'] ">
 				About
 			</h3>
 			<motion.img
@@ -33,11 +33,11 @@ function About({ pageInfo }: Props) {
 				}}
 				viewport={{ once: true }}
 				className="-mb-20 md:mb-0 flex-shrink-0 w-40 h-40  mt-10 rounded-full object-cover
-        md:rounded-[32px] md:w-64 sm:h-80 xl:w-[500px] xl:h-[600px] "
+        md:rounded-[32px] md:w-64 sm:h-80 xl:w-[500px] xl:h-[600px] bg-cyan-500 shadow-lg shadow-cyan-500/50"
 			/>
 
 			<div className="md:space-y-5 pt-10 space-y-4 px-0 md:px-10 font-['Electrolize']">
-				<h4 className="text-sm md:text-2xl xl:text-4xl text-lg font-semibold">
+				<h4 className="text-sm md:text-2xl xl:text-4xl text-lg font-semibold ">
 					Here is a{" "}
 					<span className="underline decoration-[#F7AB0A] ">little</span>{" "}
 					background
