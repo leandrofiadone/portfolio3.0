@@ -46,6 +46,7 @@ export default function Header({ socials }: Props) {
 						url={social.url}
 						fgColor="gray"
 						bgColor="transparent"
+						target="_blank"
 
 						// network={social.title}
 					/>
@@ -58,6 +59,7 @@ export default function Header({ socials }: Props) {
 					network="whatsapp"
 					fgColor="gray"
 					bgColor="transparent"
+					target="_blank"
 				/>
 
 				{/* 
