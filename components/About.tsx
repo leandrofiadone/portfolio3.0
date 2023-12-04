@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {motion} from "framer-motion"
 import Image from "next/image"
 import React from "react"
@@ -38,7 +39,7 @@ function About({pageInfo}: Props) {
         />
 
         <div className="md:space-y-5 pt-10 space-y-4 px-0 md:px-10 font-['Electrolize'] ">
-          <h4 className="text-sm md:text-2xl xl:text-4xl text-lg font-semibold ">
+          <h4 className="text-sm md:text-2xl xl:text-4xl font-semibold ">
             Here is a{" "}
             <span className="underline decoration-[#F7AB0A] ">little</span>{" "}
             background
