@@ -3,80 +3,81 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 
 @layer components {
-	.heroButton {
-		@apply sm:px-6 px-4 py-2 border border-[#242424] rounded-full uppercase tracking-widest text-gray-500
-    transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 text-xs sm:text-sm md:text-lg font-['Electrolize'];
-	}
+  .heroButton {
+    @apply sm:px-6 px-2 py-2 border border-[#242424] rounded-full uppercase tracking-widest text-gray-400
+    transition-all hover:bg-stone-900 hover:border-[#F7AB0A]/40 hover:text-[#ffffff] text-xs sm:text-xs md:text-xs font-['Electrolize'];
+  }
 
-	.contactInput {
-		@apply outline-none sm:text-base text-xs bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
-	}
+  .contactInput {
+    @apply outline-none sm:text-base text-xs bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
+  }
 
-	.frame {
-		width: 90%;
-		margin: auto;
-		text-align: center;
-	}
-	button {
-		margin: 10px;
-	}
+  .frame {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  button {
+    margin: 10px;
+  }
 
-	.custom-btn {
-		color: #fff;
+  .custom-btn {
+    color: #fff;
 
-		padding: 10px 25px;
-		font-family: "Electrolize";
-		font-weight: 500;
-		background: transparent;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		position: relative;
-		display: inline-block;
-		box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-			7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-		outline: none;
-		font-size: 16px;
-	}
+    padding: 10px 25px;
+    font-family: "Electrolize";
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 16px;
+  }
 
-	/* 5 */
-	.btn-5 {
-		width: 150px;
-		height: 27px;
-		line-height: 10px;
-		padding: 0;
-		border: none;
-		border-radius: 150px;
-		background: #d19108;
-	}
-	.btn-5:hover {
-		color: #f7ab0a;
-		background: transparent;
-		box-shadow: none;
-	}
-	.btn-5:before,
-	.btn-5:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 1px;
-		width: 0;
-		background: #f7ac0a8c;
-		box-shadow: -1px -1px 10px 0px #f7ab0a;
+  /* 5 */
+  .btn-5 {
+    width: 150px;
+    height: 27px;
+    line-height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 150px;
+    background: #d19108;
+  }
+  .btn-5:hover {
+    color: #f7ab0a;
+    background: transparent;
+    box-shadow: none;
+  }
+  .btn-5:before,
+  .btn-5:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1px;
+    width: 0;
+    background: #f7ac0a8c;
+    box-shadow: -1px -1px 10px 0px #f7ab0a;
 
-		transition: 400ms ease all;
-	}
-	.btn-5:after {
-		right: inherit;
-		top: inherit;
-		left: 0;
-		bottom: 0;
-	}
-	.btn-5:hover:before,
-	.btn-5:hover:after {
-		width: 100%;
-		transition: 800ms ease all;
-	}
+    transition: 400ms ease all;
+  }
+  .btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+  }
 }

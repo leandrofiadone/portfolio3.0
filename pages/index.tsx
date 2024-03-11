@@ -93,11 +93,12 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 				<footer className="sticky bottom-5 w-full cursor-pointer">
 					<div className="flex items-center justify-center">
 						<Image
-							className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0"
+							className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 z-50"
 							src="/arrow.png"
 							alt="up"
 							width={30}
 							height={30}
+							
 						/>
 					</div>
 				</footer>

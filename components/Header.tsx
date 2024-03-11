@@ -28,13 +28,14 @@ export default function Header({ socials }: Props) {
 				initial={{
 					x: -500,
 					opacity: 0,
-					scale: 0.5,
+					scale: 0.3,
 				}}
 				animate={{
 					x: 0,
 					opacity: 1,
 					scale: 1,
-					width: 200,
+					width: 150,
+					
 				}}
 				transition={{
 					duration: 1.2,
@@ -47,7 +48,7 @@ export default function Header({ socials }: Props) {
 						fgColor="gray"
 						bgColor="transparent"
 						target="_blank"
-
+						className="inline-block p-2 transition duration-300 ease-in-out transform xl:scale-150  hover:scale-125 "
 						// network={social.title}
 					/>
 				))}
@@ -60,6 +61,7 @@ export default function Header({ socials }: Props) {
 					fgColor="gray"
 					bgColor="transparent"
 					target="_blank"
+					className="inline-block p-2 transition duration-300 ease-in-out transform xl:scale-150  hover:scale-125"
 				/>
 
 				{/* 

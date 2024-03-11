@@ -14,12 +14,12 @@ const ProjectExperience = ({ projects }: Props) => {
 		justify-evenly mx-auto items-center">
 			<h3
 				className="absolute sm:top-20 top-14 uppercase 
-			sm:tracking-[20px] tracking-[10px] text-[#61BAAD] xl:text-2xl md:text-lg  text-sm font-['Electrolize']">
+			sm:tracking-[20px] tracking-[10px] text-[#61BAAD] xl:text-base md:text-lg  text-sm font-['Electrolize'] ">
 				projects
 			</h3>
 
 			<div
-				className="w-full xl:mt-5 sm:mt-20 flex space-x-5 overflow-x-scroll 
+				className="w-full xl:mt-8 sm:mt-20 flex space-x-5 overflow-x-scroll 
 			scroll-smooth hover:scroll-auto p-10 snap-x snap-mandatory
 			scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 z-10 ">
 				{projects?.map((project) => (
