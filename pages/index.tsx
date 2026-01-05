@@ -12,6 +12,7 @@ import SkipLink from "../components/SkipLink";
 import SectionNav from "../components/SectionNav";
 import ScrollProgress from "../components/ScrollProgress";
 import StickyNav from "../components/StickyNav";
+import ScrollToTop from "../components/ScrollToTop";
 import { PageInfo, Project, Skill, Social } from "../typings";
 import { fetchGetProjects } from "../utils/fetchGetProjects";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
@@ -32,8 +33,16 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 			className="bg-[rgb(36,36,36)] text-white h-screen
     snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0
     scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
-	bg-gradient-to-b from-gray-900 via-cyan-900 to-sky-900
+	bg-gradient-to-b from-gray-900 via-cyan-900 to-sky-900 relative
 	">
+			{/* Grid pattern overlay */}
+			<div
+				className="fixed inset-0 grid-pattern-bg opacity-30 pointer-events-none z-0"
+				style={{
+					maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 100%)',
+					WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 100%)'
+				}}
+			/>
 			<SkipLink />
 			<ScrollProgress />
 			<StickyNav />
@@ -107,43 +116,38 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 				/>
 			</Head>
 
-			<Header socials={socials} />
 			<SectionNav />
 
-			<main id="main">
-				<section id="hero" className="snap-start" aria-label="Hero section">
+			<main id="main" className="relative z-10">
+				<section id="hero" className="snap-start relative" aria-label="Hero section">
+					<div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-cyan-900/30 to-slate-900/40 -z-10" />
+					<div className="relative z-50">
+						<Header socials={socials} />
+					</div>
 					<Hero pageInfo={pageInfo} />
 				</section>
 
-				<section id="about" className="snap-center" aria-label="About me">
+				<section id="about" className="snap-center relative" aria-label="About me">
+					<div className="absolute inset-0 bg-gradient-to-tr from-cyan-950/50 via-teal-900/30 to-slate-900/50 -z-10" />
 					<About pageInfo={pageInfo} />
 				</section>
 
-				<section id="projectexperience" className="snap-center" aria-label="Projects">
+				<section id="projectexperience" className="snap-center relative" aria-label="Projects">
+					<div className="absolute inset-0 bg-gradient-to-bl from-slate-900/50 via-cyan-900/40 to-sky-900/50 -z-10" />
 					<ProjectExperience projects={projects} />
 				</section>
 
-				<section id="skills" className="snap-start" aria-label="Skills">
+				<section id="skills" className="snap-start relative" aria-label="Skills">
+					<div className="absolute inset-0 bg-gradient-to-tl from-teal-950/50 via-slate-900/30 to-cyan-900/50 -z-10" />
 					<Skills skills={skills} />
 				</section>
 
-				<section id="contact" className="snap-start" aria-label="Contact form">
+				<section id="contact" className="snap-start relative" aria-label="Contact form">
+					<div className="absolute inset-0 bg-gradient-to-b from-cyan-900/40 via-slate-900/50 to-gray-950/60 -z-10" />
 					<Contact pageInfo={pageInfo} />
 				</section>
 			</main>
-			<Link href="#hero" aria-label="Scroll back to top">
-				<footer className="sticky bottom-5 w-full cursor-pointer">
-					<div className="flex items-center justify-center">
-						<Image
-							className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 z-50"
-							src="/arrow.png"
-							alt="Scroll to top arrow"
-							width={30}
-							height={30}
-						/>
-					</div>
-				</footer>
-			</Link>
+			<ScrollToTop />
 		</div>
 	);
 };
