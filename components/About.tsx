@@ -14,15 +14,13 @@ type Props = {
 
 function About({pageInfo}: Props) {
   return (
-    <div className="relative bg-gradient-to-r from-slate-900 via-cyan-900 to-slate-900 overflow-hidden">
-      {/* Decorative angled divider */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-gray-900 to-transparent transform -skew-y-2 origin-top-left -translate-y-12" />
+    <div className="relative overflow-hidden">
 
       <motion.div
         initial={fadeIn.initial}
         whileInView={fadeIn.animate}
         transition={fadeIn.transition}
-        className="flex flex-col relative min-h-screen text-center md:text-left md:flex-row
+        className="flex flex-col relative min-h-screen text-center lg:text-left lg:flex-row
           max-w-7xl 2xl:max-w-[1400px]
           xl:px-10 lg:px-5 md:px-8 px-4
           justify-center xl:justify-between
@@ -33,7 +31,7 @@ function About({pageInfo}: Props) {
           whileInView={slideInLeft.animate}
           transition={slideInLeft.transition}
           viewport={{once: true}}
-          className="-mb-10 md:mb-0 flex-shrink-0 mt-10"
+          className="-mb-10 lg:mb-0 flex-shrink-0 mt-10"
         >
           <Image
             src={urlFor(pageInfo?.aboutMePic).url()}
@@ -50,7 +48,7 @@ function About({pageInfo}: Props) {
           />
         </MotionDiv>
 
-        <div className="md:space-y-5 pt-10 space-y-4 px-4 md:px-10 font-['Electrolize'] max-w-2xl">
+        <div className="lg:space-y-5 pt-10 space-y-4 px-4 lg:px-10 font-['Electrolize'] max-w-2xl">
           <h4 className="text-lg sm:text-xl md:text-2xl xl:text-4xl font-semibold">
             <span className="underline decoration-[#F7AB0A]">About me...</span>
           </h4>
