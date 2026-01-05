@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -9,19 +9,6 @@ type Props = {
 };
 
 export default function Header({ socials }: Props) {
-	// const [isHover, setIsHover] = useState(false);
-
-	// const handleMouseEnter = () => {
-	// 	setIsHover(true);
-	// };
-	// const handleMouseLeave = () => {
-	// 	setIsHover(false);
-	// };
-	// const boxStyle = {
-	// 	//...
-	// 	fgColor: isHover ? "gray" : "null",
-	// };
-
 	return (
 		<header className="sticky top-0 sm:p-5 pt-0 px-3 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
 			<motion.div
@@ -34,13 +21,11 @@ export default function Header({ socials }: Props) {
 					x: 0,
 					opacity: 1,
 					scale: 1,
-					width: 150,
-					
 				}}
 				transition={{
 					duration: 1.2,
 				}}
-				className="flex flex-row items-center ">
+				className="flex flex-row items-center gap-1">
 				{socials.map((social) => (
 					<SocialIcon
 						key={social._id}
@@ -48,12 +33,10 @@ export default function Header({ socials }: Props) {
 						fgColor="gray"
 						bgColor="transparent"
 						target="_blank"
-						className="inline-block p-2 transition duration-300 ease-in-out transform xl:scale-150  hover:scale-125 "
-						// network={social.title}
+						style={{ height: 40, width: 40 }}
+						className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80"
 					/>
 				))}
-
-				{/* NO LOGRE CONECTAR WHATSAPP A SU NETWORK POR LA API DE SANITY */}
 
 				<SocialIcon
 					url="https://wa.me/+5491151275282"
@@ -61,36 +44,9 @@ export default function Header({ socials }: Props) {
 					fgColor="gray"
 					bgColor="transparent"
 					target="_blank"
-					className="inline-block p-2 transition duration-300 ease-in-out transform xl:scale-150  hover:scale-125"
+					style={{ height: 40, width: 40 }}
+					className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80"
 				/>
-
-				{/* 
-				<SocialIcon
-					url="https://twitter.com/tokentango"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://t.me/Tokentango"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://wa.me/+5491151275282"
-					network="whatsapp"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://www.linkedin.com/in/leandro-fiadone"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://github.com/leandrofiadone"
-					fgColor="gray"
-					bgColor="transparent"
-				/> */}
 			</motion.div>
 
 			<Link href="#contact">

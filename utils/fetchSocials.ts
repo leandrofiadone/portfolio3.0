@@ -1,12 +1,6 @@
 import { Social } from "../typings";
+import { fetcher } from "./fetcher";
 
-export const fetchSocials = async () => {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/getSocial`);
-
-	const data = await res.json();
-	const socials: Social[] = data.socials;
-
-	console.log("fetching", socials);
-
-	return socials;
+export const fetchSocials = async (): Promise<Social[]> => {
+	return fetcher<Social[]>('/api/getSocial', 'socials');
 };

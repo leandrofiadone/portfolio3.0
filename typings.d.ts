@@ -29,6 +29,9 @@ export interface PageInfo extends SanityBody {
 	name: string;
 	phoneNumber: string;
 	aboutMePic: Image;
+	typewriterTexts?: string[];
+	aboutText?: string;
+	contactTitle?: string;
 }
 
 export interface Technology extends SanityBody {

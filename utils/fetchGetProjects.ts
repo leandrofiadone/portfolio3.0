@@ -1,14 +1,6 @@
 import { Project } from "../typings";
+import { fetcher } from "./fetcher";
 
-export const fetchGetProjects = async () => {
-	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjectsXp`
-	);
-
-	const data = await res.json();
-	const projects: Project[] = data.projects;
-
-	console.log("fetching", projects);
-
-	return projects;
+export const fetchGetProjects = async (): Promise<Project[]> => {
+	return fetcher<Project[]>('/api/getProjectsXp', 'projects');
 };

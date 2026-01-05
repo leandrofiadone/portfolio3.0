@@ -5,14 +5,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 
+/* Smooth scroll for all browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @layer components {
   .heroButton {
-    @apply sm:px-6 px-2 py-2 border border-[#242424] rounded-full uppercase tracking-widest text-gray-400
-    transition-all hover:bg-stone-900 hover:border-[#F7AB0A]/40 hover:text-[#ffffff] text-xs sm:text-xs md:text-xs font-['Electrolize'];
+    @apply sm:px-6 px-2 py-2 border-2 border-gray-600 rounded-full uppercase tracking-widest text-gray-300
+    transition-all duration-300 hover:bg-[#F7AB0A]/10 hover:border-[#F7AB0A] hover:text-[#F7AB0A] hover:shadow-lg hover:shadow-[#F7AB0A]/20 hover:scale-105 text-xs sm:text-xs md:text-xs font-['Electrolize'];
   }
 
   .contactInput {
-    @apply outline-none sm:text-base text-xs bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
+    @apply outline-none sm:text-base text-xs bg-slate-400/20 rounded-sm border-b-2 px-6 py-4 border-gray-600 text-gray-200 placeholder-gray-400 transition-all focus:border-[#F7AB0A] focus:text-white hover:border-[#F7AB0A]/60 focus:bg-slate-400/30;
   }
 
   .frame {
