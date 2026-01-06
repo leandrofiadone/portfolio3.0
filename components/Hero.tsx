@@ -10,6 +10,23 @@ type Props = {
 	pageInfo: PageInfo;
 };
 
+// Generate Fibonacci spiral path
+const generateSpiralPath = (scale: number = 1) => {
+	const points: string[] = [];
+	const goldenRatio = 1.618033988749895;
+	const totalPoints = 1000;
+
+	for (let i = 0; i < totalPoints; i++) {
+		const angle = i * 0.08;
+		const radius = Math.pow(goldenRatio, angle / (2 * Math.PI)) * 3 * scale;
+		const x = radius * Math.cos(angle);
+		const y = radius * Math.sin(angle);
+		points.push(`${i === 0 ? 'M' : 'L'} ${x} ${y}`);
+	}
+
+	return points.join(' ');
+};
+
 function Hero({ pageInfo }: Props) {
 	const defaultTexts = [
 		`I´m <${pageInfo?.name}/> 💻`,
@@ -28,27 +45,61 @@ function Hero({ pageInfo }: Props) {
 		deleteSpeed: 50,
 	});
 
+	// Golden ratio spacing (φ = 1.618)
+	// Base unit: 16px -> φ¹: 26px -> φ²: 42px -> φ³: 68px
 	return (
-    <div className="h-screen flex flex-col space-y-2 sm:space-y-4 items-center justify-center text-center overflow-hidden">
+    <div className="h-screen flex flex-col items-center justify-center text-center overflow-hidden">
 		<BackGroundCircle />
 
-		{/* Image */}
-		<Image
-			width={180}
-			height={180}
-			className="relative rounded-full mx-auto object-cover
-				w-[140px] h-[140px] sm:w-40 sm:h-40 md:w-44 md:h-44 xl:w-48 xl:h-48"
-			src={urlFor(pageInfo?.heroImage).url()}
-			alt={`${pageInfo?.name} - ${pageInfo?.role}`}
-			priority
-		/>
+		{/* Image with Fibonacci spiral centered behind it */}
+		{/* mt-[42px] lg:mt-[68px] pushes image down, mb spacing to text */}
+		<div className="relative flex items-center justify-center mt-[42px] lg:mt-[68px] mb-[26px] lg:mb-[42px]">
+			{/* Fibonacci Spiral - centered on image, responsive sizing */}
+			<svg
+				className="absolute h-[280px] w-[280px] sm:h-[360px] sm:w-[360px] md:h-[450px] md:w-[450px] lg:h-[550px] lg:w-[550px] xl:h-[650px] xl:w-[650px] opacity-30 z-10"
+				viewBox="-250 -250 500 500"
+			>
+				<path
+					d={generateSpiralPath(1)}
+					fill="none"
+					stroke="#F7AB0A"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+				/>
+				<g transform="rotate(180)">
+					<path
+						d={generateSpiralPath(0.95)}
+						fill="none"
+						stroke="#F7AB0A"
+						strokeWidth="1"
+						strokeLinecap="round"
+						opacity={0.4}
+					/>
+				</g>
+			</svg>
 
-		{/* Text content - outside container for full width */}
-		<div className="z-20">
-			<h2 className="text-xs sm:text-sm md:text-base uppercase text-gray-500 pb-1 sm:pb-2 tracking-[0.2em] sm:tracking-[0.4em] font-['Electrolize']">
+			<Image
+				width={180}
+				height={180}
+				className="relative z-20 rounded-full mx-auto object-cover
+					w-[140px] h-[140px] sm:w-40 sm:h-40 md:w-44 md:h-44 xl:w-48 xl:h-48"
+				src={urlFor(pageInfo?.heroImage).url()}
+				alt={`${pageInfo?.name} - ${pageInfo?.role}`}
+				priority
+			/>
+		</div>
+
+		{/* Role - visible on mobile only, hidden on lg+ */}
+		{/* mb-[16px] sm:mb-[26px] = base and φ¹ spacing */}
+		<h2 className="z-20 lg:hidden text-xs sm:text-sm uppercase text-gray-500 tracking-[0.2em] sm:tracking-[0.4em] font-['Electrolize'] mb-[16px] sm:mb-[26px]">
 			{pageInfo?.role}
-			</h2>
-			<h1 className="text-base sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold px-4 sm:px-10 font-['Electrolize'] min-h-[1.5rem] sm:min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem] flex items-center justify-center">
+		</h2>
+
+		{/* Typewriter text */}
+		{/* mb-[26px] lg:mb-[42px] = φ¹ and φ² spacing */}
+		<div className="z-20 mb-[26px] lg:mb-[42px]">
+			<h1 className="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold px-4 sm:px-10 font-['Electrolize'] min-h-[1.5rem] sm:min-h-[3rem] md:min-h-[3.5rem] lg:min-h-[4rem] flex items-center justify-center">
 			<span className="mr-2 sm:mr-3">{text}</span>
 			<Cursor cursorColor="#F7AB0A" />
 			</h1>
@@ -118,6 +169,14 @@ function Hero({ pageInfo }: Props) {
 					</svg>
 				</button>
 			</a>
+		</div>
+
+		{/* Role - visible on desktop only, hidden on mobile */}
+		{/* mt-[26px] lg:mt-[42px] = φ¹ and φ² spacing */}
+		<div className="z-20 hidden lg:flex justify-center mt-[26px] lg:mt-[42px]">
+			<h2 className="text-base xl:text-lg uppercase text-gray-500 tracking-[0.4em] xl:tracking-[0.5em] font-['Electrolize']">
+				{pageInfo?.role}
+			</h2>
 		</div>
 		</div>
 	)
