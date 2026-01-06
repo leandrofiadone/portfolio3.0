@@ -101,21 +101,20 @@ function Hero({ pageInfo }: Props) {
 			<a
 				href="LeandroFiadone-FrontEnd-CV.pdf"
 				download="LeandroFiadone-FrontEnd-CV.pdf"
-				className="w-full sm:w-auto">
-				<button className="group w-full sm:w-auto px-6 sm:px-10 py-2 sm:py-3 rounded-lg
+				className="w-full sm:w-auto inline-flex">
+				<button className="group w-full sm:w-auto px-6 sm:px-8 py-2 sm:py-3 rounded-lg
 					bg-[#F7AB0A] hover:bg-[#d19108]
-					border-2 border-[#F7AB0A] hover:border-[#d19108]
+					border border-[#F7AB0A] hover:border-[#d19108]
 					text-black font-bold
 					font-['Electrolize'] uppercase text-xs sm:text-sm tracking-widest
 					transition-all duration-300 ease-out
 					hover:shadow-[0_0_30px_rgba(247,171,10,0.5)]
-					hover:scale-105">
-					<span className="flex items-center justify-center gap-2">
-						CV RESUME
-						<svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-						</svg>
-					</span>
+					hover:scale-105
+					inline-flex items-center justify-center gap-2">
+					CV RESUME
+					<svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+					</svg>
 				</button>
 			</a>
 		</div>
