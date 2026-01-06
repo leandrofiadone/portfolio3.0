@@ -90,7 +90,7 @@ export default function StickyNav() {
 										className={`text-xs xl:text-sm font-['Electrolize'] uppercase tracking-wider transition-all duration-300 cursor-pointer
 											${
 												activeSection === section.id
-													? "text-[#61BAAD] font-semibold"
+													? "text-[#F7AB0A] font-semibold"
 													: "text-gray-400 hover:text-white"
 											}`}
 									>
@@ -143,7 +143,7 @@ export default function StickyNav() {
 										className={`block px-3 py-1.5 rounded-md transition-all duration-300 cursor-pointer
 											${
 												activeSection === section.id
-													? "text-[#61BAAD] font-semibold bg-white/10"
+													? "text-[#F7AB0A] font-semibold bg-white/10"
 													: "text-gray-400 hover:text-white hover:bg-white/5"
 											}`}
 									>

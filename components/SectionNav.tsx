@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const sections = [
 	{ id: "hero", label: "Home", color: "#F7AB0A" },
-	{ id: "about", label: "About", color: "#00DA97" },
-	{ id: "projectexperience", label: "Projects", color: "#61BAAD" },
-	{ id: "skills", label: "Skills", color: "#61BAAD" },
-	{ id: "contact", label: "Contact", color: "#00DA97" },
+	{ id: "about", label: "About", color: "#E09F3E" },
+	{ id: "projectexperience", label: "Projects", color: "#D4A855" },
+	{ id: "skills", label: "Skills", color: "#C9A227" },
+	{ id: "contact", label: "Contact", color: "#F7AB0A" },
 ];
 
 export default function SectionNav() {

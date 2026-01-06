@@ -25,7 +25,7 @@ const ProjectExperience = ({ projects }: Props) => {
 
 			{/* Projects Container - centered in remaining space */}
 			<div className="flex-1 flex flex-col items-center justify-center min-h-0">
-				<div className="relative w-full max-w-[95vw] md:max-w-[92vw] xl:max-w-[96vw] 2xl:max-w-[94vw]">
+				<div className="relative w-full max-w-[95vw] md:max-w-[92vw] xl:max-w-[88vw] 2xl:max-w-[90vw] xl:ml-16">
 				{/* Gradient Fade - subtle on mobile, stronger on desktop */}
 				<div className="hidden sm:block absolute left-0 top-0 bottom-0 w-12 sm:w-16 md:w-24 xl:w-32 z-10 pointer-events-none
 					bg-gradient-to-r from-[rgb(31,41,55)] via-[rgb(31,41,55)]/40 to-transparent" />
