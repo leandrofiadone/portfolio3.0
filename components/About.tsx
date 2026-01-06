@@ -23,33 +23,36 @@ function About({pageInfo}: Props) {
         className="flex flex-col relative min-h-screen text-center lg:text-left lg:flex-row
           max-w-7xl 2xl:max-w-[1400px]
           xl:px-10 lg:px-5 md:px-8 px-4
-          justify-center xl:justify-between
+          py-16 lg:py-0
+          justify-center lg:justify-evenly
           mx-auto items-center
-          xl:gap-16 2xl:gap-24">
+          gap-6 lg:gap-12 xl:gap-16 2xl:gap-24">
         <MotionDiv
           initial={slideInLeft.initial}
           whileInView={slideInLeft.animate}
           transition={slideInLeft.transition}
           viewport={{once: true}}
-          className="-mb-10 lg:mb-0 flex-shrink-0 mt-10"
+          className="flex-shrink-0"
         >
-          <Image
-            src={urlFor(pageInfo?.aboutMePic).url()}
-            alt={`About ${pageInfo?.name}`}
-            width={550}
-            height={570}
-            className="w-32 h-32 rounded-full object-cover
+          <div className="relative w-32 h-32 rounded-full overflow-hidden
               sm:w-40 sm:h-40 sm:rounded-[24px]
-              md:rounded-[32px] md:w-64 md:h-80
-              xl:w-[450px] xl:h-[470px]
-              2xl:w-[550px] 2xl:h-[570px]
+              md:rounded-[32px] md:w-72 md:h-80
+              lg:w-80 lg:h-96
+              xl:w-[450px] xl:h-[500px]
+              2xl:w-[550px] 2xl:h-[600px]
               bg-cyan-500 shadow-lg shadow-cyan-500/30
-              transition-all duration-300 hover:shadow-cyan-500/50"
-          />
+              transition-all duration-300 hover:shadow-cyan-500/50">
+            <Image
+              src={urlFor(pageInfo?.aboutMePic).url()}
+              alt={`About ${pageInfo?.name}`}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </MotionDiv>
 
-        <div className="lg:space-y-5 pt-10 space-y-4 px-4 lg:px-10 font-['Electrolize'] max-w-2xl">
-          <h4 className="text-lg sm:text-xl md:text-2xl xl:text-4xl font-semibold">
+        <div className="lg:space-y-5 space-y-3 px-2 sm:px-4 lg:px-10 font-['Electrolize'] max-w-2xl">
+          <h4 className="text-base sm:text-xl md:text-2xl xl:text-4xl font-semibold">
             <span className="underline decoration-[#F7AB0A]">About me...</span>
           </h4>
           {pageInfo?.aboutText ? (
@@ -57,7 +60,7 @@ function About({pageInfo}: Props) {
               {pageInfo.aboutText}
             </p>
           ) : (
-            <div className="text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed space-y-4">
+            <div className="text-xs sm:text-sm lg:text-lg xl:text-xl leading-relaxed space-y-2 sm:space-y-4">
               <p>
                 📑 Since <span className="text-[#F7AB0A] font-semibold">March 2023</span>, I've been a Full-Stack Developer with a strong
                 Front-End focus at{" "}
