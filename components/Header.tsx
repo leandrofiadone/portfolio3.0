@@ -15,7 +15,7 @@ export default function Header({ socials }: Props) {
 	return (
 		<>
 			{/* Mobile/Tablet Header - horizontal layout */}
-			<header className="lg:hidden fixed top-0 left-0 right-0 py-0.5 px-1 sm:p-3 flex items-center justify-between max-w-7xl mx-auto z-50">
+			<header className="lg:hidden fixed top-2 left-0 right-0 px-2 sm:px-4 sm:top-3 flex items-center justify-between max-w-7xl mx-auto z-50">
 				<motion.div
 					initial={{
 						x: -500,
@@ -30,7 +30,7 @@ export default function Header({ socials }: Props) {
 					transition={{
 						duration: 1.2,
 					}}
-					className="flex flex-row items-center -space-x-1">
+					className="flex flex-row items-center gap-0.5 sm:gap-1">
 					{socials.map((social) => (
 						<SocialIcon
 							key={social._id}
@@ -38,8 +38,8 @@ export default function Header({ socials }: Props) {
 							fgColor="gray"
 							bgColor="transparent"
 							target="_blank"
-							style={{ height: 24, width: 24 }}
-							className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[32px] sm:[&]:!w-[32px]"
+							style={{ height: 28, width: 28 }}
+							className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[34px] sm:[&]:!w-[34px]"
 						/>
 					))}
 
@@ -49,8 +49,8 @@ export default function Header({ socials }: Props) {
 						fgColor="gray"
 						bgColor="transparent"
 						target="_blank"
-						style={{ height: 24, width: 24 }}
-						className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[32px] sm:[&]:!w-[32px]"
+						style={{ height: 28, width: 28 }}
+						className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[34px] sm:[&]:!w-[34px]"
 					/>
 				</motion.div>
 
@@ -86,11 +86,11 @@ export default function Header({ socials }: Props) {
 						}}
 						className="flex flex-row items-center text-gray-300 cursor-pointer">
 						<SocialIcon
-							className="cursor-pointer"
+							className="cursor-pointer sm:[&]:!h-[34px] sm:[&]:!w-[34px]"
 							network="email"
 							fgColor="gray"
 							bgColor="transparent"
-							style={{ height: 24, width: 24 }}
+							style={{ height: 28, width: 28 }}
 						/>
 					</motion.div>
 				</Link>
