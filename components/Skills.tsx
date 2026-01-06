@@ -14,10 +14,10 @@ const Skills = ({ skills }: Props) => {
 			<motion.div
 				className="min-h-screen flex relative flex-col text-center
 			md:text-left xl:flex-row max-w-7xl 2xl:max-w-[1400px] xl:px-10 justify-center xl-space-y-0 mx-auto items-center py-20">
-				<h3 className="absolute top-20 sm:top-24 uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[#61BAAD] text-xl sm:text-2xl font-['Electrolize']">
+				<h3 className="hidden sm:block absolute top-20 sm:top-24 uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[#61BAAD] text-xl sm:text-2xl font-['Electrolize']">
 					Skills
 				</h3>
-				<h3 className="absolute top-32 sm:top-36 pt-1 uppercase tracking-[0.15em] sm:tracking-[0.2em] text-gray-300 text-xs sm:text-sm font-['Electrolize']">
+				<h3 className="hidden sm:block absolute top-32 sm:top-36 pt-1 uppercase tracking-[0.15em] sm:tracking-[0.2em] text-gray-300 text-xs sm:text-sm font-['Electrolize']">
 					Hover over a skill for current proficiency
 				</h3>
 

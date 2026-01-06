@@ -31,14 +31,14 @@ export default function ScrollToTop() {
 
 	return (
 		<Link href="#hero" aria-label="Scroll back to top">
-			<div className="fixed bottom-8 right-8 cursor-pointer z-10 group">
+			<div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 cursor-pointer z-10 group">
 				<div className="relative">
 					<Image
-						className="h-10 w-10 sm:h-12 sm:w-12 rounded-full filter grayscale hover:grayscale-0 transition-all duration-300 group-hover:scale-110 opacity-60 hover:opacity-100"
+						className="h-7 w-7 sm:h-9 sm:w-9 rounded-full filter grayscale hover:grayscale-0 transition-all duration-300 group-hover:scale-110 opacity-50 hover:opacity-100"
 						src="/arrow.png"
 						alt="Scroll to top arrow"
-						width={48}
-						height={48}
+						width={36}
+						height={36}
 					/>
 				</div>
 			</div>
