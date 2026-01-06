@@ -28,7 +28,7 @@ const Contact = ({ pageInfo }: Props) => {
 	return (
 		<div className="min-h-screen flex relative flex-column text-center md:text-left md-flex:row
 			max-w-7xl 2xl:max-w-[1400px] lg:px-10 px-5 justify-evenly mx-auto items-center py-20">
-			<h3 className="absolute xl:top-20 sm:top-16 top-14 uppercase font-['Electrolize'] tracking-[0.3em] sm:tracking-[0.4em] text-[#00DA97] text-xl sm:text-2xl font-['Electrolize']">
+			<h3 className="hidden sm:block absolute xl:top-20 sm:top-16 top-14 uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[#00DA97] text-xl sm:text-2xl font-['Electrolize']">
 				Contact
 			</h3>
 			<div className="flex flex-col lg:pt-8 pt-5 space-y-2 font-['Electrolize']">

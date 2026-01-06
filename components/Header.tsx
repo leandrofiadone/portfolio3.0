@@ -1,18 +1,21 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Social } from "../typings";
+import { useActiveSection } from "../hooks/useActiveSection";
 
 type Props = {
 	socials: Social[];
 };
 
 export default function Header({ socials }: Props) {
+	const activeSection = useActiveSection();
+
 	return (
 		<>
 			{/* Mobile/Tablet Header - horizontal layout */}
-			<header className="lg:hidden fixed top-0 left-0 right-0 pt-1 px-2 sm:p-5 flex items-start justify-between max-w-7xl mx-auto z-50">
+			<header className="lg:hidden fixed top-0 left-0 right-0 py-0.5 px-1 sm:p-3 flex items-center justify-between max-w-7xl mx-auto z-50">
 				<motion.div
 					initial={{
 						x: -500,
@@ -27,7 +30,7 @@ export default function Header({ socials }: Props) {
 					transition={{
 						duration: 1.2,
 					}}
-					className="flex flex-row items-center gap-0">
+					className="flex flex-row items-center -space-x-1">
 					{socials.map((social) => (
 						<SocialIcon
 							key={social._id}
@@ -35,8 +38,8 @@ export default function Header({ socials }: Props) {
 							fgColor="gray"
 							bgColor="transparent"
 							target="_blank"
-							style={{ height: 28, width: 28 }}
-							className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[35px] sm:[&]:!w-[35px]"
+							style={{ height: 24, width: 24 }}
+							className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[32px] sm:[&]:!w-[32px]"
 						/>
 					))}
 
@@ -46,10 +49,25 @@ export default function Header({ socials }: Props) {
 						fgColor="gray"
 						bgColor="transparent"
 						target="_blank"
-						style={{ height: 28, width: 28 }}
-						className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[35px] sm:[&]:!w-[35px]"
+						style={{ height: 24, width: 24 }}
+						className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 sm:[&]:!h-[32px] sm:[&]:!w-[32px]"
 					/>
 				</motion.div>
+
+				{/* Section name in center */}
+				<AnimatePresence mode="wait">
+					{activeSection && (
+						<motion.span
+							key={activeSection}
+							initial={{ opacity: 0, y: -10 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: 10 }}
+							transition={{ duration: 0.2 }}
+							className="absolute left-1/2 -translate-x-1/2 uppercase text-[10px] sm:text-xs tracking-[0.2em] text-[#61BAAD] font-['Electrolize']">
+							{activeSection}
+						</motion.span>
+					)}
+				</AnimatePresence>
 
 				<Link href="#contact">
 					<motion.div
@@ -72,7 +90,7 @@ export default function Header({ socials }: Props) {
 							network="email"
 							fgColor="gray"
 							bgColor="transparent"
-							style={{ height: 28, width: 28 }}
+							style={{ height: 24, width: 24 }}
 						/>
 					</motion.div>
 				</Link>

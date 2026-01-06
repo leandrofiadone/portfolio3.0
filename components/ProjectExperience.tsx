@@ -13,7 +13,7 @@ const ProjectExperience = ({ projects }: Props) => {
 	return (
 		<div className="h-screen flex relative overflow-hidden flex-col max-w-full mx-auto px-4 md:px-6 pt-16 pb-8">
 			{/* Title */}
-			<div className="w-full text-center mb-6 flex-shrink-0">
+			<div className="hidden sm:block w-full text-center mb-6 flex-shrink-0">
 				<h3 className="uppercase tracking-[0.3em] sm:tracking-[0.4em]
 					text-[#61BAAD] text-xl md:text-2xl font-['Electrolize']">
 					projects
