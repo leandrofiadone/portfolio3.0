@@ -70,12 +70,12 @@ export default function StickyNav() {
 			}`}
 		>
 			<div className="bg-gray-900/95 backdrop-blur-md border-b border-white/10 shadow-lg">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+				<div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2">
 					<div className="flex items-center justify-between">
 						{/* Logo/Name */}
 						<Link href="#hero">
 							<span
-								className="text-xl font-bold font-['Electrolize'] text-white hover:text-[#F7AB0A] transition-colors cursor-pointer"
+								className="text-lg sm:text-xl font-bold font-['Electrolize'] text-white hover:text-[#F7AB0A] transition-colors cursor-pointer"
 								onClick={() => setMobileMenuOpen(false)}
 							>
 								LF
@@ -104,7 +104,7 @@ export default function StickyNav() {
 						<a
 							href="LeandroFiadone-FrontEnd-CV.pdf"
 							download="LeandroFiadone-FrontEnd-CV.pdf"
-							className="hidden lg:block px-3 xl:px-4 py-2 rounded-md bg-[#F7AB0A] hover:bg-[#d19108] text-black font-['Electrolize'] text-xs uppercase tracking-wider font-semibold transition-all duration-300 hover:scale-105 whitespace-nowrap"
+							className="hidden lg:block px-2.5 xl:px-3 py-1.5 rounded-md bg-[#F7AB0A] hover:bg-[#d19108] text-black font-['Electrolize'] text-xs uppercase tracking-wider font-semibold transition-all duration-300 hover:scale-105 whitespace-nowrap"
 						>
 							Download CV
 						</a>
@@ -112,11 +112,11 @@ export default function StickyNav() {
 						{/* Mobile Hamburger Button */}
 						<button
 							onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-							className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
+							className="lg:hidden p-1.5 text-gray-400 hover:text-white transition-colors"
 							aria-label="Toggle menu"
 						>
 							<svg
-								className="w-6 h-6"
+								className="w-5 h-5"
 								fill="none"
 								strokeLinecap="round"
 								strokeLinejoin="round"
@@ -135,19 +135,19 @@ export default function StickyNav() {
 
 					{/* Mobile Menu */}
 					{mobileMenuOpen && (
-						<div className="lg:hidden mt-4 pb-4 space-y-3">
+						<div className="lg:hidden mt-2 pb-2 space-y-1.5">
 							{sections.map((section) => (
 								<Link key={section.id} href={`#${section.id}`}>
 									<div
 										onClick={() => setMobileMenuOpen(false)}
-										className={`block px-4 py-2 rounded-md transition-all duration-300 cursor-pointer
+										className={`block px-3 py-1.5 rounded-md transition-all duration-300 cursor-pointer
 											${
 												activeSection === section.id
 													? "text-[#61BAAD] font-semibold bg-white/10"
 													: "text-gray-400 hover:text-white hover:bg-white/5"
 											}`}
 									>
-										<span className="font-['Electrolize'] uppercase text-sm tracking-wider">
+										<span className="font-['Electrolize'] uppercase text-xs tracking-wider">
 											{section.label}
 										</span>
 									</div>
@@ -158,7 +158,7 @@ export default function StickyNav() {
 							<a
 								href="LeandroFiadone-FrontEnd-CV.pdf"
 								download="LeandroFiadone-FrontEnd-CV.pdf"
-								className="block px-4 py-3 rounded-md text-center bg-[#F7AB0A] text-black font-['Electrolize'] text-sm uppercase tracking-wider font-semibold transition-all duration-300"
+								className="block px-3 py-2 mt-2 rounded-md text-center bg-[#F7AB0A] text-black font-['Electrolize'] text-xs uppercase tracking-wider font-semibold transition-all duration-300"
 								onClick={() => setMobileMenuOpen(false)}
 							>
 								Download CV

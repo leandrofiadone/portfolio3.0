@@ -10,7 +10,7 @@ type Props = {
 
 export default function Header({ socials }: Props) {
 	return (
-		<header className="sticky top-0 sm:p-5 pt-0 px-3 flex items-start justify-between max-w-7xl mx-auto z-50 xl:items-center ">
+		<header className="sticky top-0 pt-2 px-3 sm:p-5 flex items-start justify-between max-w-7xl mx-auto z-50 xl:items-center ">
 			<motion.div
 				initial={{
 					x: -500,
@@ -25,7 +25,7 @@ export default function Header({ socials }: Props) {
 				transition={{
 					duration: 1.2,
 				}}
-				className="flex flex-row items-center gap-1">
+				className="flex flex-row items-center gap-0.5 sm:gap-1">
 				{socials.map((social) => (
 					<SocialIcon
 						key={social._id}
@@ -33,7 +33,7 @@ export default function Header({ socials }: Props) {
 						fgColor="gray"
 						bgColor="transparent"
 						target="_blank"
-						style={{ height: 40, width: 40 }}
+						style={{ height: 35, width: 35 }}
 						className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80"
 					/>
 				))}
@@ -44,7 +44,7 @@ export default function Header({ socials }: Props) {
 					fgColor="gray"
 					bgColor="transparent"
 					target="_blank"
-					style={{ height: 40, width: 40 }}
+					style={{ height: 35, width: 35 }}
 					className="transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80"
 				/>
 			</motion.div>
@@ -70,6 +70,7 @@ export default function Header({ socials }: Props) {
 						network="email"
 						fgColor="gray"
 						bgColor="transparent"
+						style={{ height: 35, width: 35 }}
 					/>
 					<p className="uppercase hidden md:inline-flex text-sm text-gray font-['Electrolize']">
 						Get in touch
