@@ -24,7 +24,7 @@ const ProjectExperienceCard = ({ project, isDragging }: Props) => {
 		<article
 			className="group flex flex-col
 				w-[280px] sm:w-[340px] md:w-[400px] lg:w-[440px] xl:w-[480px] 2xl:w-[540px]
-				h-[380px] sm:h-[440px] md:h-[460px] lg:h-[470px] xl:h-[465px] 2xl:h-[490px]
+				h-[480px] sm:h-[440px] md:h-[460px] lg:h-[470px] xl:h-[465px] 2xl:h-[490px]
 				flex-shrink-0
 				snap-center
 				bg-[#1a1a1a]
@@ -43,7 +43,7 @@ const ProjectExperienceCard = ({ project, isDragging }: Props) => {
 				rel="noopener noreferrer"
 				target="_blank"
 				onClick={handleClick}
-				className="w-full h-[140px] sm:h-[190px] md:h-[200px] lg:h-[205px] xl:h-[205px] 2xl:h-[215px] group/image relative block flex-shrink-0 overflow-hidden"
+				className="w-full h-[180px] sm:h-[190px] md:h-[200px] lg:h-[205px] xl:h-[205px] 2xl:h-[215px] group/image relative block flex-shrink-0 overflow-hidden"
 			>
 				<MotionDiv
 					initial={{ y: -50, opacity: 0 }}
@@ -66,7 +66,7 @@ const ProjectExperienceCard = ({ project, isDragging }: Props) => {
 			</a>
 
 			{/* Project Info - fixed height to match card */}
-			<div className="w-full h-[240px] sm:h-[250px] md:h-[260px] lg:h-[265px] xl:h-[260px] 2xl:h-[275px] flex flex-col px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3">
+			<div className="w-full h-[300px] sm:h-[250px] md:h-[260px] lg:h-[265px] xl:h-[260px] 2xl:h-[275px] flex flex-col px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3">
 				{/* Title & Date */}
 				<div className="space-y-0.5 sm:space-y-1 flex-shrink-0">
 					<a

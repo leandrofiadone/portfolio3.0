@@ -106,7 +106,7 @@ function Hero({ pageInfo }: Props) {
 		</div>
 
 		{/* Navigation Buttons - 2x2 grid on mobile, row on larger screens */}
-		<div className="z-20 w-[180px] sm:w-auto grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-1.5 sm:gap-3">
+		<div className="z-20 w-[200px] sm:w-auto grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-2 sm:gap-3">
 			<Link href="#about" className="w-full sm:w-auto">
 				<button className="group w-full sm:w-auto px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-md sm:rounded-lg
 					bg-white/5 hover:bg-white/10
