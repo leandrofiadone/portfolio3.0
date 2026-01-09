@@ -15,6 +15,8 @@
     "@heroicons/react": "^2.0.11",
     "@portabletext/react": "^1.0.6",
     "@react-spring/parallax": "^9.5.5",
+    "@react-three/drei": "^9.88.17",
+    "@react-three/fiber": "^8.15.12",
     "@sanity/image-url": "^1.0.1",
     "framer-motion": "^7.3.6",
     "next": "12.3.1",
@@ -29,12 +31,14 @@
     "react-spring-carousel": "^2.0.19",
     "react-use-draggable-scroll": "^0.4.7",
     "sanity": "^2.33.2",
+    "three": "^0.182.0",
     "vercel": "^28.4.5"
   },
   "devDependencies": {
     "@types/node": "18.7.21",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
+    "@types/three": "^0.182.0",
     "autoprefixer": "^10.4.12",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
